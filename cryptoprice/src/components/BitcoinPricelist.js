@@ -17,11 +17,6 @@ export class BitcoinPricelist extends Component {
       price_new: [],
 
 
-
-
-
-
-
     }
   }
 
@@ -39,8 +34,6 @@ export class BitcoinPricelist extends Component {
     });
     this.InitialiseHub();
     this.interval = setInterval(() => this.setState({ date_arr: this.state.date_arr.concat(new Date().toLocaleString()) }), 10000);
-
-
   }
 
   componentWillUnmount() {
@@ -86,9 +79,6 @@ export class BitcoinPricelist extends Component {
     })
   }
 
-
-
-
   render() {
 
     const data1_btc = this.state.price_new.slice().reverse().map((price, index) => (price[0]))
@@ -120,7 +110,6 @@ export class BitcoinPricelist extends Component {
       ]
     };
 
-
     return (
 
       <div className='container'>
@@ -137,7 +126,6 @@ export class BitcoinPricelist extends Component {
             </h1>
 
           ))}
-
 
         </div>
 
